@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_repair.css">
+    <script src="script_repair.js"></script>
+    <title>การซ่อมอุปกรณ์และรถพยาบาล</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="..\car_report\car_report.html">รายงานสภาพรถ</a></li>
+            <li><a href="repair.html">การซ่อมอุปกรณ์และรถพยาบาล</a></li>
+        </ul>
+    </nav>
+    <div class="header">
+        <h1 class="title">การซ่อมอุปกรณ์และรถพยาบาล</h1>
+    </div>
+    <div class="table-container">
+        <div>
+            <div class="filter-section">
+                <div>
+                    <label for="filter-date">วันที่รับซ่อม:</label>
+                    <input type="date" id="filter-date" oninput="filterTable()">
+                
+                    <label for="filter-status">สถานะการซ่อม:</label>
+                    <select id="filter-status" onchange="filterTable()">
+                        <option value="">-- เลือกสถานะ --</option>
+                        <option value="กำลังซ่อม">กำลังซ่อม</option>
+                        <option value="พร้อมใช้งาน">พร้อมใช้งาน</option>
+                        <option value="รออะไหล่">รออะไหล่</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="add-button">
+                        <button onclick="addRepair()">เพิ่มการแจ้งซ่อม +</button>
+                    </div>
+                    <div class="save-button">
+                        <button onclick="saveRepair()">บันทึกข้อมูล</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>วันที่รับซ่อม</th>
+                    <th>ทะเบียนรถ</th>
+                    <th>ประเภทการซ่อม</th>
+                    <th>อุปกรณ์/อะไหล่</th>
+                    <th>สาเหตุ</th>
+                    <th>วันที่เสร็จสิ้น</th>
+                    <th>ผู้รายงาน</th>
+                    <th>สถานะการซ่อม</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>02/01/2024</td>
+                    <td>ฒบ1234</td>
+                    <td>รถพยาบาล</td>
+                    <td>เครื่องยนต์</td>
+                    <td>ไหม้</td>
+                    <td><input type="date" value="2024-01-05"></td>
+                    <td>นายชัชพล มีแสง</td>
+                    <td>
+                        <select>
+                            <option>รอรถ/อุปกรณ์</option>
+                            <option>รออะไหล่</option>
+                            <option>กำลังซ่อม</option>
+                            <option>พร้อมใช้งาน</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02/01/2024</td>
+                    <td>คต5678</td>
+                    <td>อุปกรณ์ทางการแพทย์</td>
+                    <td>เครื่องปั๊มหัวใจ</td>
+                    <td>ชำรุด</td>
+                    <td><input type="date"></td>
+                    <td>นายชัชพล มีแสง</td>
+                    <td>
+                        <select>
+                            <option>รอรถ/อุปกรณ์</option>
+                            <option>รออะไหล่</option>
+                            <option>กำลังซ่อม</option>
+                            <option>พร้อมใช้งาน</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
