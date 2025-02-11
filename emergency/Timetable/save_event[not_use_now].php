@@ -1,3 +1,6 @@
+// หน้านี้ยังไม่ได้ใช้งานจริง
+
+
 <?php
 date_default_timezone_set('Asia/Bangkok'); // ตั้งค่าโซนเวลา
 
